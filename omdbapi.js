@@ -1,31 +1,18 @@
 $(document).ready(function(){
+  var omd = new XMLHttpRequest();
+  var yeah 
   $.ajax({
     type:"GET",
-    url:"https://api.github.com/users/marcode777/repos",
-    success: function(repos) {
-      for(var i = 0; i <repos.length; i++){
-        var newRepoUrl = buildRepoUrl(repos[i])
-        $(".here").append(newRepoUrl);
-      
-      }
-    
-    },
+    url:"http://www.omdbapi.com/?",
+    success: function(data, textStatus, jqXHR) {
+      console.log(data);
+      // document.getElementById("here").innerHTML = yeah;
+      },
+  
     error: function(jqXHR, textStatus, errorThrown){
      console.log(jqXHR);
      console.log(textStatus);
      console.log(errorThrown);
     }
-  });
-
-  function buildRepoUrl(repoData){
-    var commitsApiUrl = "https://api.github.com/repos/";
-    commitsApiUrl += repoData.owner.login + "/";
-    commitsApiUrl += repoData.name + "/commits";
-
-    var newLink = $("<a>")
-      .attr("href", commitsApiUrl)
-      .addClass("list-group-item")
-      .append(repoData.full_name);
-    return newLink;
-  }
+  })
   });
