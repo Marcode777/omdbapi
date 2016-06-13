@@ -1,12 +1,13 @@
 $(document).ready(function(){
   var omd = new XMLHttpRequest();
-  var yeah 
+  
   $.ajax({
     type:"GET",
-    url:"http://www.omdbapi.com/?",
+    url:"http://www.omdbapi.com/?t=the matrix",
     success: function(data, textStatus, jqXHR) {
       console.log(data);
-      // document.getElementById("here").innerHTML = yeah;
+      var yeah = data;
+      document.getElementById("here").innerHTML = yeah;
       },
   
     error: function(jqXHR, textStatus, errorThrown){
@@ -16,3 +17,5 @@ $(document).ready(function(){
     }
   })
   });
+
+//how do i concatenate what is entered on the form onto the url request ?
