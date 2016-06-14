@@ -1,6 +1,6 @@
 $(document).ready(function(){
   var omd = new XMLHttpRequest();
-  
+  document.getElementById("target").addEventListener("click", )
   $.ajax({
     type:"GET",
     url:"http://www.omdbapi.com/?t=the matrix",
