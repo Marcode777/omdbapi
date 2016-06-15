@@ -1,9 +1,11 @@
 $(document).ready(function(){
   var omd = new XMLHttpRequest();
-  document.getElementById("target").addEventListener("click", )
+  function = confirmInput(){
+    fname = document.forms[0].fname.value;
+  }
   $.ajax({
     type:"GET",
-    url:"http://www.omdbapi.com/?t=the matrix",
+    url:"http://www.omdbapi.com/?t=the matrix" + fname,
     success: function(data, textStatus, jqXHR) {
       console.log(data);
       var yeah = data;
