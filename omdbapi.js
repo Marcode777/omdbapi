@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var omd = new XMLHttpRequest();
   function = confirmInput(){
-    fname = document.forms[0].fname.value;
+    fname = document.getElementById("target").value;
   }
   $.ajax({
     type:"GET",
