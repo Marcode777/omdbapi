@@ -5,8 +5,9 @@ $(document).ready(function(){
   }
   $.ajax({
     type:"GET",
-    url:"http://www.omdbapi.com/?t=the matrix" + fname,
+    url:"http://www.omdbapi.com/?t=the matrix"
     success: function(data, textStatus, jqXHR) {
+      fname + url;
       console.log(data);
       var yeah = data;
       document.getElementById("here").innerHTML = yeah;
