@@ -1,12 +1,13 @@
 $("#target").submit(function(){
     $.ajax({
        type:"POST",
-        url:"http://www.omdbapi.com/?t=the matrix"
+        url:"http://www.omdbapi.com/?" + yeah
         success: function(data, textStatus, jqXHR) {
         fname + url;
         console.log(data);
         var yeah = data;
-        document.getElementById("here").innerHTML = yeah;
+
+        document.getElementById("here").innerHTML = yup;
       },
   
     error: function(jqXHR, textStatus, errorThrown){
