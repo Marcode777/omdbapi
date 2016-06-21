@@ -3,11 +3,10 @@ $("#target").submit(function(){
        type:"POST",
         url:"http://www.omdbapi.com/?" + yeah
         success: function(data, textStatus, jqXHR) {
-        fname + url;
         console.log(data);
         var yeah = data;
 
-        document.getElementById("here").innerHTML = yup;
+        document.getElementById("here").innerHTML = ;
       },
   
     error: function(jqXHR, textStatus, errorThrown){
